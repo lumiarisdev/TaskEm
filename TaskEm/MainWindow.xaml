@@ -1,0 +1,33 @@
+﻿<Window x:Class="TaskEm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskEm" xmlns:views="clr-namespace:TaskEm.Views"
+        mc:Ignorable="d"
+        Title="TaskEm" Height="1000" Width="650">
+
+    <Window.Resources>
+        
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Task 'Em" HorizontalAlignment="Center" Margin="5" FontSize="36" FontFamily="Arial" FontWeight="DemiBold"/>
+
+        <Label Grid.Row="1" Content="Title" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="3"/>
+        <Label Grid.Row="1" Content="Description" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="3"/>
+        <Label Grid.Row="1" Content="Completed?" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3"/>
+
+        <views:TaskView x:Name="TaskViewControl" Loaded="TaskViewControl_Loaded" Grid.Row="2"/>
+
+        <Label Grid.Row ="3" Content="William Ziegler 2019" HorizontalAlignment="Right" Margin="5"/>
+
+    </Grid>
+</Window>
